@@ -15,14 +15,14 @@ btn.addEventListener('click', () => {
   if (round <= 5) {
     let userGuess = parseInt(input.value);
 
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 5) {
-      alert("⚠️ Please enter a valid number between 1 and 5!");
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 9) {
+      alert("⚠️ Please enter a valid number between 1 and 9!");
       input.value = "";
       input.focus();
       return;
     }
 
-    let randomNumber = Math.floor(Math.random() * 5) + 1;
+    let randomNumber = Math.floor(Math.random() * 9) + 1;
 
     // Remove previous color class
     Display.classList.remove("win", "lose");
@@ -41,9 +41,9 @@ btn.addEventListener('click', () => {
 
     round++;
 
-    text.innerHTML = `🎮 Round: ${round <= 5 ? round : 5}/5`;
+    text.innerHTML = `🎮 Round: ${round <= 9 ? round : 9}/9`;
 
-    if (round > 5) {
+    if (round > 9) {
       text.innerHTML = `
         <br>🎉 <b>Game Over!</b><br>
         ✅ Wins: ${wingame}<br>
