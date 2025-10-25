@@ -15,7 +15,7 @@ btn.addEventListener('click', () => {
   if (round <= 5) {
     let userGuess = parseInt(input.value);
 
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 9) {
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 5) {
       alert("⚠️ Please enter a valid number between 1 and 9!");
       input.value = "";
       input.focus();
@@ -41,9 +41,9 @@ btn.addEventListener('click', () => {
 
     round++;
 
-    text.innerHTML = `🎮 Round: ${round <= 9 ? round : 9}/9`;
+    text.innerHTML = `🎮 Round: ${round <= 5 ? round : 5}/5`;
 
-    if (round > 9) {
+    if (round > 5) {
       text.innerHTML = `
         <br>🎉 <b>Game Over!</b><br>
         ✅ Wins: ${wingame}<br>
