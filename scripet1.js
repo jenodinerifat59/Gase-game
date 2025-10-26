@@ -43,7 +43,7 @@ btn.addEventListener('click', () => {
 
     text.innerHTML = `🎮 Round: ${round <= 5 ? round : 5}/5`;
 
-    if (round > 5) {
+    if (round > 9) {
       text.innerHTML = `
         <br>🎉 <b>Game Over!</b><br>
         ✅ Wins: ${wingame}<br>
